@@ -11,7 +11,7 @@
 
 @implementation Target_YSmartOrder
 
-- (UIViewController *)Action_ConfirmOrderViewController:(NSDictionary *)params
+- (UIViewController *)Action_YSmartOrderVC:(NSDictionary *)params
 {
     YSmartOrderVC * vc = [[YSmartOrderVC alloc]init];
     vc.dicData = params;
