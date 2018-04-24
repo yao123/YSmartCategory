@@ -12,8 +12,9 @@
 - (UIViewController *)smartViewControllerWithTitle:(NSString *)title goodsName:(NSString *)backColor
 {
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    params[@"goodsId"] = title;
-    params[@"goodsName"] = backColor;
+    [params setObject:@"title" forKey:title];
+    [params setObject:@"backName" forKey:backColor];
+
      return [self performTarget:@"YSmartOrder" action:@"YSmartOrderVC" params:params shouldCacheTarget:NO];
 }
 @end

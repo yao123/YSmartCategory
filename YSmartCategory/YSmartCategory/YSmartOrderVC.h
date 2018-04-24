@@ -10,6 +10,9 @@
 
 @interface YSmartOrderVC : UIViewController
 
-@property (nonatomic,strong)NSDictionary * dicData;
+
+@property (nonatomic, copy)NSString * titleName;
+
+@property (nonatomic, copy)NSString *backName;
 
 @end

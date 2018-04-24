@@ -17,8 +17,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = [self.dicData objectForKey:@"goodsId"];
-    self.view.backgroundColor = [UIColor redColor];
+    self.title = self.titleName;
+    self.view.backgroundColor = [UIColor darkGrayColor];
+    [self creatBtn];
+}
+
+- (void)creatBtn
+{
+    UIButton * closeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [closeBtn setTitle:@"关闭" forState:UIControlStateNormal];
+    closeBtn.backgroundColor = [UIColor redColor];
+    closeBtn.frame = CGRectMake([UIScreen mainScreen].bounds.size.width / 2 - 50, [UIScreen mainScreen].bounds.size.height - 100, 100, 40);
+    [closeBtn addTarget:self action:@selector(closeClicekd) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:closeBtn];
+}
+
+- (void)closeClicekd
+{
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
